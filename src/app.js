@@ -4,11 +4,14 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 config();
 
-const bookRoutes= require('./routes/book.routes.js');//dependiendo el tipo de DB y la cantidad de rutas, se pueden importar de una forma u otra para no tener problemas con el llamado de cada una en comparacion con la de las demas
+const bookRoutes= require('./routes/book.routes');//dependiendo el tipo de DB y la cantidad de rutas, se pueden importar de una forma u otra para no tener problemas con el llamado de cada una en comparacion con la de las demas
 
 //usamos express para los middlewares y rutas
 const app = express();
 app.use(bodyParser.json()); // parsea el body de las request a json
+
+console.log('mongo_url:' + process.env.MONGO_URL);
+console.log('mongo_db_name:' + process.env.MONGO_DB_NAME);
 
 //conexion con la base de datos
 mongoose.connect(process.env.MONGO_URL, {
