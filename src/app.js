@@ -13,8 +13,8 @@ app.use(bodyParser.json()); // parsea el body de las request a json
 console.log('mongo_url:',process.env);
 
 //conexion con la base de datos
-mongoose.connect(process.env.MONGO_URL, {
-    dbName: process.env.MONGO_DB_NAME,
+mongoose.connect('mongodb://mongo:QtsQMgbnHHveAHKqPstElqAiQRAxEiHs@mongodb.railway.internal:27017', {
+    dbName: 'books',
 });
 
 const db = mongoose.connection;
