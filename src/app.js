@@ -10,8 +10,7 @@ const bookRoutes= require('./routes/book.routes');//dependiendo el tipo de DB y 
 const app = express();
 app.use(bodyParser.json()); // parsea el body de las request a json
 
-console.log('mongo_url:' + process.env.MONGO_URL);
-console.log('mongo_db_name:' + process.env.MONGO_DB_NAME);
+console.log('mongo_url:' + process.env);
 
 //conexion con la base de datos
 mongoose.connect(process.env.MONGO_URL, {
