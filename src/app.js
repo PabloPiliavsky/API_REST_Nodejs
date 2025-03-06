@@ -2,7 +2,7 @@ const express = require('express');
 const { config } = require('dotenv');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-config();
+//config();
 
 const bookRoutes= require('./routes/book.routes');//dependiendo el tipo de DB y la cantidad de rutas, se pueden importar de una forma u otra para no tener problemas con el llamado de cada una en comparacion con la de las demas
 
