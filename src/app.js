@@ -12,7 +12,7 @@ app.use(bodyParser.json()); // parsea el body de las request a json
 
 //conexion con la base de datos
 mongoose.connect(process.env.MONGO_URL, {
-    dbName: process.env.MONGO_NAME,
+    dbName: process.env.MONGO_DB_NAME,
 });
 
 const db = mongoose.connection;
